@@ -2,14 +2,14 @@ Type: Application
 Name: start-nacos-spring-boot
 Provider:
   - 阿里云
-Version: 0.0.1
+Version: dev
 Description: 部署 Nacos 配置管理到函数计算
 HomePage: https://github.com/devsapp/start-website
 Tags:
   - 微服务
   - MSE
   - Nacos
-Category: 微服务
+Category: 其它
 Service:
   函数计算:
     Authorities:
@@ -50,11 +50,11 @@ Parameters:
     serviceName:
       title: 服务名
       type: string
-      default: website-${default-suffix}
+      default: start-microservice
       pattern: "^[a-zA-Z_][a-zA-Z0-9-_]{0,127}$"
       description: 只能包含字母、数字、下划线和中划线。不能以数字、中划线开头。长度在 1-128 之间。
     functionName:
       title: 函数名
+      default: nacos-spring-boot
       type: string
-      default: hoppscotch
       description: 应用的函数名称
